@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "604544749012",
+    "firebase_url": "https://whatsthewave-21a23.firebaseio.com",
+    "project_id": "whatsthewave-21a23",
+    "storage_bucket": "whatsthewave-21a23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604544749012:android:7b90c0782a710989d25a41",
+        "android_client_info": {
+          "package_name": "com.example.globe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604544749012-46q48bc4nk85fqlfvlsknkfekhqus4pe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiab4IILKThBwzyQgmqVzVyu-StW5m6cE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604544749012-46q48bc4nk85fqlfvlsknkfekhqus4pe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
