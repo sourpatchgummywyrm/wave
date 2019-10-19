@@ -6,7 +6,13 @@ class ProfileImageWidget extends StatelessWidget {
   final bool showLevel;
   final double level;
   final double imageSize = 100;
-  const ProfileImageWidget({Key key, this.isOnline = false, @required this.imagePath, this.showLevel = false, this.level}) : super(key:key);
+  const ProfileImageWidget(
+      {Key key,
+      this.isOnline = false,
+      @required this.imagePath,
+      this.showLevel = false,
+      this.level})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,10 @@ class ProfileImageWidget extends StatelessWidget {
         width: imageSize,
         height: imageSize,
         child: ClipOval(
-          child: Image.asset(imagePath, fit: BoxFit.cover,),
+          child: Image.asset(
+            imagePath,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
