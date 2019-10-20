@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/animation.dart';
 import 'package:globe/global.dart';
 import 'package:globe/newuser/Signup.dart';
 import 'Login.dart';
@@ -24,27 +23,10 @@ class StartState extends State<Start> {
         children: <Widget>[
           new SizedBox(), //add padding
           new Container(
-            padding: EdgeInsets.only(
-              top: 50.0,
-            ),
-            child: new GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => SignUp()));
-              },
-              child: new Text(
-                "Create an account",
-                style: new TextStyle(
-                    fontFamily: 'Varela Round',
-                    color: Colors.white,
-                    fontSize: 20.5,
-                    letterSpacing: 1.5,
-                    fontWeight: FontWeight.w600),
-              ),
-            ),
-          ),
-          new Container(
             height: labelheight,
+          ),
+          new Padding(
+            padding: EdgeInsets.only(top: 20.0),
           ),
           new Container(
             child: new SizedBox(
@@ -59,7 +41,7 @@ class StartState extends State<Start> {
                 elevation: 20.0,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
-                child: new Text("Login", style: reggie),
+                child: new Text("Enter", style: reggie),
               ),
             ),
           ),

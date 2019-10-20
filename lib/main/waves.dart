@@ -24,17 +24,17 @@ class WavesState extends State<Waves> {
     //     setState(() {
     //        = false;
     //     });
-    //     final snackBar = new SnackBar(
-    //       content: new Text(
-    //         "You are now attending this Party",
-    //         style: reggie4,
-    //         textAlign: TextAlign.center,
-    //       ),
-    //       duration: new Duration(seconds: 3),
-    //       backgroundColor: Colors.white,
-    //     );
-    //     _scaffoldKey.currentState.showSnackBar(snackBar);
-    //   };
+    // final snackBar = new SnackBar(
+    //   content: new Text(
+    //     "You are now attending this Party",
+    //     style: reggie4,
+    //     textAlign: TextAlign.center,
+    //   ),
+    //   duration: new Duration(seconds: 3),
+    //   backgroundColor: Colors.white,
+    // );
+    // _scaffoldKey.currentState.showSnackBar(snackBar);
+    // };
     // }
     double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
@@ -60,6 +60,22 @@ class WavesState extends State<Waves> {
                     onDismissed: (direction) {
                       setState(() {
                         _events.removeAt(index);
+                        final snackBar = new SnackBar(
+                          content: new Text(
+                            "${events.name} removed",
+                            style: reggie4,
+                            textAlign: TextAlign.center,
+                          ),
+                          duration: new Duration(seconds: 3),
+                          backgroundColor: Colors.white,
+                          action: new SnackBarAction(
+                            label: "UNDO",
+                            onPressed: () {
+                              setState(() => _events.insert(index, events));
+                            },
+                          ),
+                        );
+                        _scaffoldKey.currentState.showSnackBar(snackBar);
                         // print(Events[0]);
                       });
                     },
