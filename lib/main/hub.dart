@@ -5,6 +5,17 @@ import 'package:globe/main/search.dart';
 import 'package:globe/main/waves.dart';
 
 class Hub extends StatefulWidget {
+  Hub(
+      {this.partyName,
+      this.partyLocation,
+      this.partyTime,
+      this.partyDescription,
+      this.condition});
+  String partyName;
+  String partyLocation;
+  String partyTime;
+  String partyDescription;
+  bool condition = true;
   @override
   State<StatefulWidget> createState() {
     return new HubState();

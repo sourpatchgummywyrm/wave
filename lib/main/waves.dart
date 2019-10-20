@@ -4,8 +4,7 @@ import 'package:globe/global.dart';
 import 'package:globe/main/profile.dart';
 
 class Waves extends StatefulWidget {
-  Waves({Key key}) : super(key: key);
-
+  
   @override
   State<StatefulWidget> createState() {
     return new WavesState();
@@ -14,27 +13,13 @@ class Waves extends StatefulWidget {
 
 class WavesState extends State<Waves> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  bool _enabled = true;
-
   @override
   Widget build(BuildContext context) {
-    // var onPressed;
-    // if (_enabled) {
-    //   onPressed = () {
-    //     setState(() {
-    //        = false;
-    //     });
-    // final snackBar = new SnackBar(
-    //   content: new Text(
-    //     "You are now attending this Party",
-    //     style: reggie4,
-    //     textAlign: TextAlign.center,
-    //   ),
-    //   duration: new Duration(seconds: 3),
-    //   backgroundColor: Colors.white,
-    // );
-    // _scaffoldKey.currentState.showSnackBar(snackBar);
-    // };
+    // if (widget.condition) {
+    //   setState(() {
+    //     // Events(widget.partyName, widget.partyLocation, widget.partyTime, widget.partyDescription)
+    //     _events.add(Events());
+    //   });
     // }
     double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
@@ -62,12 +47,12 @@ class WavesState extends State<Waves> {
                         _events.removeAt(index);
                         final snackBar = new SnackBar(
                           content: new Text(
-                            "${events.name} removed",
-                            style: reggie4,
+                            "${events.name} has been removed",
+                            style: reggie3,
                             textAlign: TextAlign.center,
                           ),
                           duration: new Duration(seconds: 3),
-                          backgroundColor: Colors.white,
+                          backgroundColor: Colors.grey,
                           action: new SnackBarAction(
                             label: "UNDO",
                             onPressed: () {
@@ -209,7 +194,7 @@ class Events {
   bool rsvp;
 }
 
-final List<Events> _events = <Events>[
+List<Events> _events = <Events>[
   Events(
       name: 'party1',
       location: 'location',
