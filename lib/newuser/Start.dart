@@ -53,6 +53,9 @@ class SignState extends State<Sign> {
         setState(() {
           _authHint = 'Sign In Error\n\n${e.toString()}';
         });
+        if (e.toString()=="type 'AuthResult' is not a subtype of type 'FirebaseUser' in type cast"){
+          Navigator.push(context,MaterialPageRoute(builder: (context) => Hub()));
+        }
         print(e);
       }
     } else {
