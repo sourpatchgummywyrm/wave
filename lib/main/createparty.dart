@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:globe/global.dart';
+import 'package:globe/main/waves.dart';
 import 'package:globe/newuser/termsofservice.dart';
 import 'hub.dart';
 
@@ -19,6 +20,7 @@ class CreatePartyState extends State<CreateParty> {
 
   DateTime date = new DateTime.now();
   TimeOfDay time = new TimeOfDay.now();
+  bool conditionM = true;
 
   Future<Null> selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
@@ -49,7 +51,16 @@ class CreatePartyState extends State<CreateParty> {
     var _onPressed;
     if (isButtonEnabled) {
       _onPressed = () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Hub()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Hub(
+                      partyName: partyName.text,
+                      partyLocation: partyLocation.text,
+                      partyTime: date.toString(),
+                      partyDescription: time.toString(),
+                      condition: conditionM,
+                    )));
       };
     }
     double height = MediaQuery.of(context).size.height;
