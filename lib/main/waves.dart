@@ -2,20 +2,20 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 import 'package:globe/main/profile.dart';
+import 'attending.dart';
 
-String eventName="";
-String day="";
-String timeOfDay="";
-String place="";
+String eventName = "";
+String day = "";
+String timeOfDay = "";
+String place = "";
 
 class Waves extends StatefulWidget {
-
   Waves();
-  Waves.create(String name, String date,String time,String location){
-     eventName = name;
-     day = date;
-     timeOfDay = time;
-     place = location;
+  Waves.create(String name, String date, String time, String location) {
+    eventName = name;
+    day = date;
+    timeOfDay = time;
+    place = location;
   }
   @override
   State<StatefulWidget> createState() {
@@ -28,18 +28,18 @@ class WavesState extends State<Waves> {
   @override
   Widget build(BuildContext context) {
     bool repeat = false;
-    for(int i = 0; i < _events.length; i++) {
-      if(eventName == _events[i].name){
+    for (int i = 0; i < _events.length; i++) {
+      if (eventName == _events[i].name) {
         repeat = true;
       }
     }
-    if(!repeat && eventName!="") {
+    if (!repeat && eventName != "") {
       _events.add(new Events(
-        name: eventName,
-        location: place,
-        description: day,
-        time: timeOfDay,
-        rsvp: false));
+          name: eventName,
+          location: place,
+          description: day,
+          time: timeOfDay,
+          rsvp: false));
     }
     double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
@@ -143,9 +143,13 @@ class WavesState extends State<Waves> {
                                                   ? () {
                                                       setState(() {
                                                         events.rsvp = true;
-                                                        Profile.add(events.name, events.location, events.rsvp);
+                                                        Attending.add(
+                                                            events.name,
+                                                            events.location,
+                                                            events.rsvp);
+                                                        debugPrint(
+                                                            "event added");
                                                       });
-
                                                     }
                                                   : null,
                                               shape: RoundedRectangleBorder(
