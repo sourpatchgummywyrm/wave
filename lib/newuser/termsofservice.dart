@@ -17,7 +17,6 @@ class Terms extends StatelessWidget {
           backgroundColor: PrimaryColor,
         ),
         body: text = new RichText(
-<<<<<<< HEAD
             text: new TextSpan(
               style: new TextStyle(
                 fontFamily: 'Times New Roman',
@@ -29,13 +28,13 @@ class Terms extends StatelessWidget {
                              style: new TextStyle(color: generalBlueColor,
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.bold)),
-                new TextSpan(text: 'By using this application, you agree to our Terms of Service listed below\n\n\n', 
+                new TextSpan(text: 'By using this application, you agree to our Terms of Service listed below\n\n', 
                              style: new TextStyle(color: bforBlack,
-                                                  fontSize: 15.0,
+                                                  fontSize: 12.0,
                                                   fontWeight: FontWeight.bold)),
-                new TextSpan(text: '   Conditions of Use\n\n', 
+                new TextSpan(text: '   Conditions of Use\n', 
                              style: new TextStyle(color: bforBlack,
-                                                  fontSize: 15.0,
+                                                  fontSize: 12.0,
                                                   fontWeight: FontWeight.bold)),
                 new TextSpan(text: 'We will provide their services to you, which are subject to the conditions '
                                    'stated below in this document. Every time you visit this website, use its '
@@ -45,18 +44,18 @@ class Terms extends StatelessWidget {
                                    'and content that are threatening. Basically just use the app to create a '
                                    'listing for a party that you are hosting or whatever like that.\n\n', 
                              style: new TextStyle(color: bforBlack,
-                                                  fontSize: 10.0, )),
-              new TextSpan(text: '   Private Policy\n\n', 
+                                                  fontSize: 5.0, )),
+              new TextSpan(text: '   Private Policy\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)),
               new TextSpan(text: 'Basically just dont\' post nothing that has sensitive or information '
                                   'you wanna keep private such as your credit card number and stuff.\n\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)),
-              new TextSpan(text: '   Copyright\n\n', 
+                                                fontSize: 5.0,)),
+              new TextSpan(text: '   Copyright\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)),
               new TextSpan(text: 'Content published on this application(digital downloads, images, texts, ' 
                                   'graphics, logos) is the property of the application and its content creators '
@@ -64,10 +63,10 @@ class Terms extends StatelessWidget {
                                   'the content found on this application is the exclusive property of the '
                                   'application, with copyright authorship for this compilation by the application.\n\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)),  
-              new TextSpan(text: '   Communications\n\n', 
+                                                fontSize: 5.0,)),  
+              new TextSpan(text: '   Communications\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)), 
               new TextSpan(text: 'The entire communication with the applicatoion is electronic. Every time ' 
                                  'you open our application, you are going to be communicating with the ' 
@@ -77,10 +76,10 @@ class Terms extends StatelessWidget {
                                  'disclosures, agreements and other communications the application provide to you '
                                  'electronically meet the legal requirements that such communications be in writing.\n\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)), 
-              new TextSpan(text: '   Applicable Law\n\n', 
+                                                fontSize: 5.0,)), 
+              new TextSpan(text: '   Applicable Law\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)), 
               new TextSpan(text: 'By using this application, you agree that the laws of the \''
                                  'Murica, without regard to principles of conflict laws, will '
@@ -88,10 +87,10 @@ class Terms extends StatelessWidget {
                                  'might come between the application and you, or its business '
                                  'partners and associates.\n\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)),    
-              new TextSpan(text: '   Disputes\n\n', 
+                                                fontSize: 5.0,)),    
+              new TextSpan(text: '   Disputes\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)),
               new TextSpan(text: 'Any dispute related in any way to your using of this application '
                                  'or anything regarding this application shall be arbitrated by '
@@ -103,18 +102,18 @@ class Terms extends StatelessWidget {
                                  'to contact Aris Chung that you wish to resolve a dispute regarding '
                                  ' this application \n\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)),
-              new TextSpan(text: '   Comments, Reviews, and Emails\n\n', 
+                                                fontSize: 5.0,)),
+              new TextSpan(text: '   Comments, Reviews, and Emails\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)),
               new TextSpan(text: 'Confucious say: don\'t making the shit posting on this ' 
                                  'appricashion. \n\n',   
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)),  
-              new TextSpan(text: '   User Accounts\n\n', 
+                                                fontSize: 5.0,)),  
+              new TextSpan(text: '   User Accounts\n', 
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 15.0,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.bold)),
               new TextSpan(text: 'If you are an owner of an account on this application, you are '
                                  'solely responsible for maintaining the confidentiality of your '
@@ -123,93 +122,11 @@ class Terms extends StatelessWidget {
                                  'We reserve all rights to terminate accounts, edit or remove '
                                  'content and cancel listing in our sole discretion. \n\n',   
                            style: new TextStyle(color: bforBlack,
-                                                fontSize: 10.0,)),                          
-              ],
-=======
-          text: new TextSpan(
-            style: new TextStyle(
-              fontFamily: 'Times New Roman',
-              fontSize: 14.0,
-              color: Colors.black,
->>>>>>> 48b1beb57c822d9a6410575f17cd395b80bf1af4
+                                                fontSize: 5.0,)),
+              ]
             ),
-            children: <TextSpan>[
-              new TextSpan(
-                  text: 'Welcome to [[INSERT APP NAME HERE]]! \n\n',
-                  style: new TextStyle(
-                      color: generalBlueColor,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold)),
-              new TextSpan(
-                  text:
-                      'By using this application, you agree to our Terms of Service listed below\n\n',
-                  style: new TextStyle(
-                      color: bforBlack,
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.bold)),
-              new TextSpan(
-                  text: 'Conditions of Use\n\n',
-                  style: new TextStyle(
-                      color: bforBlack,
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.bold)),
-              new TextSpan(
-                  text:
-                      'We will provide their services to you, which are subject to the conditions '
-                      'stated below in this document. Every time you visit this website, use its '
-                      'services or make a purchase, you accept the following conditions. '
-                      'This is why we urge you to read them carefully.'
-                      'You are not allowed to spam party listings, create inappropriate content '
-                      'and content that are threatening. Basically just use the app to create a '
-                      'listing for a party that you are hosting or whatever like that ',
-                  style: new TextStyle(
-                    color: bforBlack,
-                    fontSize: 10.0,
-                  )),
-              new TextSpan(
-                  text: 'Private Policy\n\n',
-                  style: new TextStyle(
-                      color: bforBlack,
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.bold)),
-              new TextSpan(
-                  text:
-                      'Basically just dont\' post nothing that has sensitive or information '
-                      'you wanna keep private such as your credit card number and stuff.\n\n',
-                  style: new TextStyle(
-                      color: bforBlack,
-                      fontSize: 10.0,
-                      fontWeight: FontWeight.bold)),
-              new TextSpan(
-                  text: 'Copyright\n\n',
-                  style: new TextStyle(
-                      color: bforBlack,
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.bold)),
-              new TextSpan(
-                  text:
-                      'Content published on this application(digital downloads, images, texts, '
-                      'graphics, logos) is the property of the application and its content creators '
-                      'and protected by international copyright laws. The entire compilation of '
-                      'the content found on this application is the exclusive property of the '
-                      'application, with copyright authorship for this compilation by the application.\n\n',
-                  style: new TextStyle(
-                      color: bforBlack,
-                      fontSize: 10.0,
-                      fontWeight: FontWeight.bold)),
-            ],
           ),
         ),
-        /*Text("By using this application, you agree to our terms" 
-                   " of service.",
-          style: TextStyle(
-                    decoration: TextDecoration.none,
-                    color: generalBlueColor,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w600,
-          )
-        ),*/
-      ),
     );
   }
 }
