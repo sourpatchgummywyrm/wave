@@ -24,7 +24,7 @@ class Terms extends StatelessWidget {
                 color: Colors.black,
               ),
               children: <TextSpan>[
-                new TextSpan(text: '\tWelcome to [[INSERT APP NAME HERE]]! \n\n', 
+                new TextSpan(text: '\tWelcome to What\'s the Wave! \n\n', 
                              style: new TextStyle(color: generalBlueColor,
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.bold)),

@@ -46,8 +46,8 @@ class _MappingState extends State<Mapping> {
     switch(_authStatus) {
       case AuthStatus.notSignedIn:
       return new Start(
-        //auth: widget.auth,
-       // onSignedIn: _signedIn,
+        auth: widget.auth,
+        onSignedIn: _signedIn,
       );
       break;
       case AuthStatus.signedIn:
