@@ -16,6 +16,51 @@ class SearchState extends State<Search> {
     double height1 = height * 0.8;
     return new Scaffold(
       backgroundColor: paleRedColor,
+      body: new Column(children: <Widget>[
+                    Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                onChanged: (value) {
+                  //filterSearchResults(value);
+                },
+                //controller: editingController,
+                decoration: InputDecoration(
+                    labelText: "Search",
+                    hintText: "Search",
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(25.0)))),
+              ),
+            ),
+            new Padding(
+            padding: EdgeInsets.only(top: 20.0),
+          ),
+            new Container(
+child: new SizedBox(
+              height: 70.0,
+              width: 100.0,
+              child: new RaisedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CreateParty()));
+                },
+                color: Colors.white,
+                elevation: 30.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: new Text(
+                  "Create",
+                  style: new TextStyle(
+                    fontFamily: 'reggie',
+                    color: paleRedColor,
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ),
+            )
+      ],)
+      /*
       floatingActionButton: FloatingActionButton.extended(
         elevation: 20.0,
         onPressed: () {
@@ -32,7 +77,7 @@ class SearchState extends State<Search> {
         ),
         backgroundColor: Colors.white,
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,*/
     );
   }
 }
