@@ -60,24 +60,6 @@ class SearchState extends State<Search> {
             ),
             )
       ],)
-      /*
-      floatingActionButton: FloatingActionButton.extended(
-        elevation: 20.0,
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => CreateParty()));
-        },
-        label: Text(
-          'Create',
-          style: reggie,
-        ),
-        icon: Icon(
-          Icons.create,
-          color: paleRedColor,
-        ),
-        backgroundColor: Colors.white,
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,*/
     );
   }
 }

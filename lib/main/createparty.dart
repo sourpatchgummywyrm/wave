@@ -164,7 +164,7 @@ class CreatePartyState extends State<CreateParty> {
                       onPressed: () {
                         selectTime(context);
                       },
-                      child: new Text("Pick Start Time", style: reggie4),
+                      child: new Text("Pick End Time", style: reggie4),
                     ),
                   ),
                 )
