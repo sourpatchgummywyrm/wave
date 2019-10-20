@@ -83,7 +83,7 @@ class StartState extends State<Start> {
                   "Terms of Service", 
                   style: new TextStyle(
                   fontFamily: 'reggie',
-                  color: paleRedColor,
+                  color: Colors.white,
                   fontSize: 10.0,
                   ),
                 ),
