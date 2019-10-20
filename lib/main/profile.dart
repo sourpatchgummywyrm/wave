@@ -16,7 +16,8 @@ class ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: paleRedColor,
-      body: new Column(
+      body:
+      new Column(
         children: <Widget>[
           new Padding(
             padding: EdgeInsets.only(top: 30.0),
@@ -27,6 +28,16 @@ class ProfileState extends State<Profile> {
               radius: 50.0,
             ),
           ),
+          /*
+          new Container(
+              decoration: BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage("girl.png"),
+              fit: BoxFit.cover,
+             ),
+            ),
+          ),
+        */
           new Container(
             padding: EdgeInsets.only(top: 20.0),
             child: new Text(

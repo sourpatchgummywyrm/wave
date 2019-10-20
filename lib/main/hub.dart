@@ -3,19 +3,24 @@ import 'package:globe/global.dart';
 import 'package:globe/main/profile.dart';
 import 'package:globe/main/search.dart';
 import 'package:globe/main/waves.dart';
+import 'package:globe/Auth.dart';
 
 class Hub extends StatefulWidget {
-  Hub(
-      {this.partyName,
-      this.partyLocation,
-      this.partyTime,
-      this.partyDescription,
-      this.condition});
   String partyName;
   String partyLocation;
   String partyTime;
   String partyDescription;
   bool condition = true;
+  Hub(
+      {this.auth,
+      this.onSignedOut,
+      this.partyName,
+      this.partyLocation,
+      this.partyTime,
+      this.partyDescription,
+      this.condition});
+  final AuthImplementation auth;
+  final VoidCallback onSignedOut;
   @override
   State<StatefulWidget> createState() {
     return new HubState();
