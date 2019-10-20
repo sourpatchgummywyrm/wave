@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
+import 'package:globe/main/profile.dart';
 
 class Waves extends StatefulWidget {
   Waves({Key key}) : super(key: key);
@@ -11,10 +12,29 @@ class Waves extends StatefulWidget {
 }
 
 class WavesState extends State<Waves> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  _showSnackBar() {
+    final snackBar = new SnackBar(
+      content: new Text(
+        "You are now attending this Party",
+        style: reggie4,
+        textAlign: TextAlign.center,
+      ),
+      duration: new Duration(seconds: 3),
+      backgroundColor: Colors.white,
+    );
+    setState(() {
+      return null;
+    });
+    _scaffoldKey.currentState.showSnackBar(snackBar);
+  }
+
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height * 0.75;
+    double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
+      key: _scaffoldKey,
       backgroundColor: paleRedColor,
       body: new Column(
         children: <Widget>[
@@ -93,14 +113,14 @@ class WavesState extends State<Waves> {
                                             width: 300.0,
                                             child: new RaisedButton(
                                               elevation: 10.0,
-                                              onPressed: () {},
+                                              onPressed: _showSnackBar,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10.0)),
                                               color: Colors.green,
                                               child: new Text(
-                                                "Accept",
+                                                "RSVP",
                                                 style: reggie6,
                                               ),
                                             ),

@@ -12,7 +12,13 @@ class Terms extends StatelessWidget {
           title: Text('Terms of Service'),
           backgroundColor: PrimaryColor,
         ),
-        body: new DefaultTextStyle(
+        body: Text("By using this application, you agree to our terms" 
+                   " of service.",
+          style: TextStyle(
+          decoration: TextDecoration.none,
+          )
+        ),
+        /*body: new DefaultTextStyle(
           style: new TextStyle(
                 inherit: true,
                 fontSize: 20.0,
@@ -25,7 +31,7 @@ class Terms extends StatelessWidget {
                 child: Text('By using this application, you agree to our terms '
                             'of service.'), 
           )  
-        ),
+        ),*/
       ),
     );
   }
