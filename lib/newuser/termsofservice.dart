@@ -15,15 +15,46 @@ class Terms extends StatelessWidget {
         ),
         body: text = new RichText(
             text: new TextSpan(
-        // Note: Styles for TextSpans must be explicitly defined.
-         // Child text spans will inherit styles from parent
               style: new TextStyle(
+                fontFamily: 'Times New Roman',
                 fontSize: 14.0,
                 color: Colors.black,
               ),
               children: <TextSpan>[
-                new TextSpan(text: 'Hello'),
-                new TextSpan(text: 'World', style: new TextStyle(fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'Welcome to [[INSERT APP NAME HERE]]! \n\n', 
+                             style: new TextStyle(color: generalBlueColor,
+                                                  fontSize: 20.0,
+                                                  fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'By using this application, you agree to our Terms of Service listed below\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'Conditions of Use\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'We will provide their services to you, which are subject to the conditions '
+                                   'stated below in this document. Every time you visit this website, use its '
+                                   'services or make a purchase, you accept the following conditions. '
+                                   'This is why we urge you to read them carefully.'
+                                   'You are not allowed to spam party listings, create inappropriate content '
+                                   'and content that are threatening. Basically just use the app to create a '
+                                   'listing for a party that you are hosting or whatever like that ', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 10.0, )),
+              new TextSpan(text: 'Private Policy\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+              new TextSpan(text: 'Basically just dont\' post nothing that has sensitive or information '
+                                  'you wanna keep private such as your credit card number and stuff.\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 10.0,
+                                                  fontWeight: FontWeight.bold)),
+              new TextSpan(text: 'Private Policy\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
               ],
             ),
           ),
