@@ -22,7 +22,7 @@ class ProfileState extends State<Profile> {
         children: <Widget>[
           Center(
             child: new Image.asset(
-              'Girl.png',
+              'assets/Girl.png',
               width: 100,
               height: 170,
               fit: BoxFit.fill,
