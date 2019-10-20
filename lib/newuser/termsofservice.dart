@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:globe/global.dart';
 
 const PrimaryColor = const Color(0xFFEF9A9A);
-
+var text; 
 class Terms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,20 +13,60 @@ class Terms extends StatelessWidget {
           title: Text('Terms of Service'),
           backgroundColor: PrimaryColor,
         ),
-        body: new DefaultTextStyle(
-          style: new TextStyle(
-                inherit: true,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.red,
-                decorationStyle: TextDecorationStyle.wavy,
-                color: Colors.blue),
-              child: new Center(
-                child: Text('By using this application, you agree to our terms '
-                            'of service.'), 
-          )  
-        ),
+        body: text = new RichText(
+            text: new TextSpan(
+              style: new TextStyle(
+                fontFamily: 'Times New Roman',
+                fontSize: 14.0,
+                color: Colors.black,
+              ),
+              children: <TextSpan>[
+                new TextSpan(text: 'Welcome to [[INSERT APP NAME HERE]]! \n\n', 
+                             style: new TextStyle(color: generalBlueColor,
+                                                  fontSize: 20.0,
+                                                  fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'By using this application, you agree to our Terms of Service listed below\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'Conditions of Use\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+                new TextSpan(text: 'We will provide their services to you, which are subject to the conditions '
+                                   'stated below in this document. Every time you visit this website, use its '
+                                   'services or make a purchase, you accept the following conditions. '
+                                   'This is why we urge you to read them carefully.'
+                                   'You are not allowed to spam party listings, create inappropriate content '
+                                   'and content that are threatening. Basically just use the app to create a '
+                                   'listing for a party that you are hosting or whatever like that ', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 10.0, )),
+              new TextSpan(text: 'Private Policy\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+              new TextSpan(text: 'Basically just dont\' post nothing that has sensitive or information '
+                                  'you wanna keep private such as your credit card number and stuff.\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 10.0,
+                                                  fontWeight: FontWeight.bold)),
+              new TextSpan(text: 'Private Policy\n\n', 
+                             style: new TextStyle(color: bforBlack,
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+        /*Text("By using this application, you agree to our terms" 
+                   " of service.",
+          style: TextStyle(
+                    decoration: TextDecoration.none,
+                    color: generalBlueColor,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w600,
+          )
+        ),*/
       ),
     );
   }
