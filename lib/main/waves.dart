@@ -7,6 +7,7 @@ String eventName="";
 String day="";
 String timeOfDay="";
 String place="";
+
 class Waves extends StatefulWidget {
 
   Waves();

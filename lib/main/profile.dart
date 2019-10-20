@@ -17,17 +17,8 @@ class ProfileState extends State<Profile> {
     Size size = MediaQuery.of(context).size;
     return new Scaffold(
       backgroundColor: paleRedColor,
-      body:
-      new Column(
+      body: new Column(
         children: <Widget>[
-          Center(
-            child: new Image.asset(
-              'assets/Girl.png',
-              width: 100,
-              height: 170,
-              fit: BoxFit.fill,
-            ),
-          ),
           new Padding(
             padding: EdgeInsets.only(top: 30.0),
           ),
