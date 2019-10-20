@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
+import 'package:globe/newuser/termsofservice.dart';
 
 String eventName = "";
 String eventLocation = "";
@@ -24,9 +25,15 @@ class Attending extends StatefulWidget {
 class AttendingState extends State<Attending> {
   @override
   Widget build(BuildContext context) {
-    if (val) {
-      _attending.add(
-          new AttendingL(name: eventName, location: eventLocation, rsvp: val));
+    bool repeat = false;
+    for (int i = 0; i < _attending.length; i++) {
+      if (eventName == _attending[i].name) {
+        repeat = true;
+      }
+    }
+    if (!repeat && eventName != "") {
+      _attending.add(new AttendingL(
+          name: eventName, location: eventLocation, rsvp: false));
     }
     return new Scaffold(
       backgroundColor: paleRedColor,
@@ -39,7 +46,7 @@ class AttendingState extends State<Attending> {
           final attending = _attending[index];
           return new ListTile(
             title: new Column(
-              children: <Widget>[val ? new Text(attending.name) : null],
+              children: <Widget>[new Text(attending.name)],
             ),
           );
         },
