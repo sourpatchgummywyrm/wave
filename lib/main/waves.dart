@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
+import 'package:globe/main/dialog.dart';
+import 'package:globe/main/profile.dart';
 
 class Waves extends StatefulWidget {
   Waves({Key key}) : super(key: key);
@@ -11,6 +13,8 @@ class Waves extends StatefulWidget {
 }
 
 class WavesState extends State<Waves> {
+  Dialogs dialogs = new Dialogs();
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height * 0.75;
@@ -93,7 +97,11 @@ class WavesState extends State<Waves> {
                                             width: 300.0,
                                             child: new RaisedButton(
                                               elevation: 10.0,
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                final bool confirm = true;
+                                                dialogs.information(context, events.name);
+                                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
+                                              },
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
