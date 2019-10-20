@@ -51,15 +51,17 @@ class CreatePartyState extends State<CreateParty> {
     var _onPressed;
     if (isButtonEnabled) {
       _onPressed = () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Waves.create(
+        Waves.create(
                      partyName.text,
                       date.month.toString()+"/"+date.day.toString()+"/"+date.year.toString(),
                       time.format(context),
                       partyLocation.text,
-                )));
+                );
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Hub()
+        ));
       };
     }
     double height = MediaQuery.of(context).size.height;
