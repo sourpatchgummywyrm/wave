@@ -3,11 +3,11 @@ import 'package:globe/global.dart';
 import 'package:globe/main/attending.dart' as prefix0;
 import 'attending.dart';
 import 'package:globe/newuser/Start.dart'; 
+import 'package:globe/Auth.dart';
 
 
 
 class Profile extends StatefulWidget {
-  
   @override
   State<StatefulWidget> createState() {
     return new ProfileState();

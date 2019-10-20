@@ -28,6 +28,6 @@ class Auth implements AuthImplementation {
   }
 
   Future<void> signOut() async {
-    _firebaseAuth.signOut();
+    await FirebaseAuth.instance.signOut();
   }
 }
