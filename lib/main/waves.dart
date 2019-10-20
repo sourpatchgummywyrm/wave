@@ -27,12 +27,6 @@ class WavesState extends State<Waves> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    // if (widget.condition) {
-    //   setState(() {
-    //     // Events(widget.partyName, widget.partyLocation, widget.partyTime, widget.partyDescription)
-    //     _events.add(Events());
-    //   });
-    // }
     bool repeat = false;
     for(int i = 0; i < _events.length; i++) {
       if(eventName == _events[i].name){
@@ -149,7 +143,9 @@ class WavesState extends State<Waves> {
                                                   ? () {
                                                       setState(() {
                                                         events.rsvp = true;
+                                                        Profile.add(events.name, events.location, events.rsvp);
                                                       });
+
                                                     }
                                                   : null,
                                               shape: RoundedRectangleBorder(

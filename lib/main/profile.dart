@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 
+String eventName = "";
+String eventLocation = "";
+bool val;
+
 class Profile extends StatefulWidget {
   Profile({this.passedName, this.passedLocation});
   String passedName;
   String passedLocation;
+
+  Profile.add(String name, String location, bool rsvpval) {
+    eventName = name;
+    eventLocation = location;
+    val = rsvpval;
+  }
   @override
   State<StatefulWidget> createState() {
     return new ProfileState();
@@ -51,8 +61,7 @@ class ProfileState extends State<Profile> {
                       ),
                     ),
                     children: <Widget>[
-                      new Text(
-                          "Event: ${widget.passedName} , Location: ${widget.passedLocation}"),
+                      new Text("Event: $eventName , Location: $eventLocation"),
                       new Padding(
                         padding: EdgeInsets.only(top: 20.0),
                       )
