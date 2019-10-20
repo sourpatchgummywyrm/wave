@@ -3,6 +3,7 @@ import 'package:flutter/animation.dart';
 import 'package:globe/global.dart';
 import 'package:globe/newuser/Signup.dart';
 import 'Login.dart';
+import 'termsofservice.dart';
 
 class Start extends StatefulWidget {
   @override
@@ -38,7 +39,7 @@ class StartState extends State<Start> {
                     color: Colors.white,
                     fontSize: 17.5,
                     letterSpacing: 1.5,
-                    fontWeight: FontWeight.w800),
+                    fontWeight: FontWeight.w200),
               ),
             ),
           ),
@@ -66,7 +67,28 @@ class StartState extends State<Start> {
             padding: EdgeInsets.only(top: 25.0),
           ),
           new Container(
-            child: new Text("Terms of Service", style: reggie3),
+            child: new SizedBox(
+              height: 30.0,
+              width: 150.0,
+              child: new RaisedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Terms()));
+                },
+                color: Colors.grey,
+                elevation: 10.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: new Text(
+                  "Terms of Service", 
+                  style: new TextStyle(
+                  fontFamily: 'reggie',
+                  color: Colors.white,
+                  fontSize: 10.0,
+                  ),
+                ),
+              ),
+            ),
           )
         ],
       ),
