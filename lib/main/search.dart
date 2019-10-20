@@ -58,8 +58,9 @@ class SearchState extends State<Search> {
                 ),
               ),
             ),
-            )
-      ],)
+          )
+        ],
+      )
     );
   }
 }

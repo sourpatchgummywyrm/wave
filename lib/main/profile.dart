@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 import 'package:globe/main/attending.dart' as prefix0;
 import 'attending.dart';
+import 'package:globe/newuser/Start.dart'; 
 
 
 
@@ -70,24 +71,36 @@ class ProfileState extends State<Profile> {
                   setState(() {
                   });
                 },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0)),
-                color: Colors.white,
+                //shape: RoundedRectangleBorder(
+                    //borderRadius: BorderRadius.circular(10.0)),
+                //color: Colors.white,
                 child: new Row(
                   children: <Widget>[
-                    new Align(
-                      alignment: Alignment.center,
-                      child: new Icon(
-                        Icons.settings,
-                        color: paleRedColor,
-                      ),
-                    ),
+                  
                     new Align(
                         alignment: Alignment.center,
+                        child: new SizedBox(
+                          height: 30.0,
+                          width: 268.0,
+                          child: new RaisedButton(
+                            onPressed: () {
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Sign()));
+                          },
+                        color: Colors.white,
+                        elevation: 5.0,
+                        shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                         child: new Text(
-                          "Settings",
-                          style: loginScreen,
-                        ))
+                        "Logout",
+                        style: new TextStyle(
+                        fontFamily: 'reggie',
+                        color: paleRedColor,
+                        fontSize: 12.0,
+                      ),
+                      ),
+                  ),
+                    ),)
                   ],
                 ),
               ))

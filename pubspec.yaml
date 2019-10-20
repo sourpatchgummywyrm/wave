@@ -29,6 +29,14 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.7.0"
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "Wave.png"
+  image_path_android: "Wave.png"
+  adaptive_icon_background: "Wave.png"
+  adaptive_icon_foreground: "Wave.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -37,6 +45,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/Logo.png
+    - assets/Girl.png
+    - assets/Boy.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
