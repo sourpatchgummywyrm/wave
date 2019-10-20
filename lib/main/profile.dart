@@ -14,11 +14,20 @@ class Profile extends StatefulWidget {
 class ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return new Scaffold(
       backgroundColor: paleRedColor,
       body:
       new Column(
         children: <Widget>[
+          Center(
+            child: new Image.asset(
+              'Girl.png',
+              width: 100,
+              height: 170,
+              fit: BoxFit.fill,
+            ),
+          ),
           new Padding(
             padding: EdgeInsets.only(top: 30.0),
           ),
@@ -28,20 +37,10 @@ class ProfileState extends State<Profile> {
               radius: 50.0,
             ),
           ),
-          /*
-          new Container(
-              decoration: BoxDecoration(
-              image: DecorationImage(
-              image: AssetImage("girl.png"),
-              fit: BoxFit.cover,
-             ),
-            ),
-          ),
-        */
           new Container(
             padding: EdgeInsets.only(top: 20.0),
             child: new Text(
-              'Welcome, (User)',
+              'Welcome, User',
               style: loginScreen2,
             ),
           ),
