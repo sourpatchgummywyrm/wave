@@ -36,8 +36,8 @@ class SearchState extends State<Search> {
             padding: EdgeInsets.only(top: 20.0),
           ),
             new Container(
-child: new SizedBox(
-              height: 70.0,
+          child: new SizedBox(
+              height: 50.0,
               width: 100.0,
               child: new RaisedButton(
                 onPressed: () {

@@ -35,7 +35,6 @@ class StartState extends State<Start> {
       body: new Column(
         children: <Widget>[
           new SizedBox(), 
-          new Image.asset('assets/logo.png'),
           new Container(
             height: labelheight,
             child: new Image(
