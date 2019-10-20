@@ -23,6 +23,9 @@ class StartState extends State<Start> {
           new SizedBox(), //add padding
           new Container(
             height: labelheight,
+            child: new Image(
+              image: AssetImage('assets/Logo.png'),
+            ),
           ),
           new Padding(
             padding: EdgeInsets.only(top: 20.0),
@@ -33,8 +36,8 @@ class StartState extends State<Start> {
               width: 270.0,
               child: new RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Sign()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Sign()));
                 },
                 color: Colors.white,
                 elevation: 20.0,
