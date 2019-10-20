@@ -37,9 +37,9 @@ class StartState extends State<Start> {
                 style: new TextStyle(
                     fontFamily: 'Varela Round',
                     color: Colors.white,
-                    fontSize: 17.5,
+                    fontSize: 20.5,
                     letterSpacing: 1.5,
-                    fontWeight: FontWeight.w200),
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
