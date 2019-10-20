@@ -19,6 +19,7 @@ enum FormType {
   register
 }
 
+<<<<<<< HEAD
 class SignState extends State<Sign> {
   static final formKey = new GlobalKey<FormState>();
 
@@ -120,12 +121,42 @@ class SignState extends State<Sign> {
             text: 'Create an account',
             height: 44.0,
             onPressed: validateAndSubmit
+=======
+    return new Scaffold(
+      backgroundColor: paleRedColor,
+      body: new Column(
+        children: <Widget>[
+          new SizedBox(), //add padding
+          new Container(
+            height: labelheight,
+          ),
+          new Padding(
+            padding: EdgeInsets.only(top: 20.0),
+          ),
+          new Container(
+            child: new SizedBox(
+              height: 50.0,
+              width: 270.0,
+              child: new RaisedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
+                },
+                color: Colors.white,
+                elevation: 20.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: new Text("Enter", style: reggie),
+              ),
+            ),
+>>>>>>> 8e35a6c7a392e10ee5d3fb6bd33a8f5db74cfc4c
           ),
           new FlatButton(
             key: new Key('need-login'),
             child: new Text("Have an account? Login"),
             onPressed: moveToLogin
           ),
+<<<<<<< HEAD
         ];
     }
     return null;
@@ -164,6 +195,28 @@ class SignState extends State<Sign> {
                           children: usernameAndPassword() + submitWidgets(),
                         )
                     )
+=======
+          new Container(
+            child: new SizedBox(
+              height: 30.0,
+              width: 150.0,
+              child: new RaisedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Terms()));
+                },
+                color: Colors.white,
+                elevation: 10.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: new Text(
+                  "Terms of Service",
+                  style: new TextStyle(
+                    fontFamily: 'reggie',
+                    color: paleRedColor,
+                    fontSize: 12.0,
+                  ),
+>>>>>>> 8e35a6c7a392e10ee5d3fb6bd33a8f5db74cfc4c
                 ),
               ])
             ),

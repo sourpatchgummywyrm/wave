@@ -5,6 +5,8 @@ Color boldRedColor = new Color(0xFFf50000);
 Color neonGreenColor = new Color(0xFF39ff14);
 Color darkerRedColors = new Color(0xFFff9999);
 Color silverColors = new Color(0xFFDCDCDC);
+Color generalBlueColor = new Color(0xFF0D47A1); 
+Color bforBlack = new Color(0xFF000000);
 
 TextStyle loginScreen = new TextStyle(
     fontFamily: 'Varela Round',
@@ -17,7 +19,7 @@ TextStyle loginScreen2 = new TextStyle(
     fontFamily: 'Varela Round',
     color: Colors.white,
     fontSize: 20.0,
-    letterSpacing: 1.5,
+    letterSpacing: 1.8,
     fontWeight: FontWeight.w800);
 
 TextStyle reggie = new TextStyle(

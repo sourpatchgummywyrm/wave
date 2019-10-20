@@ -16,7 +16,6 @@ class SearchState extends State<Search> {
     double height1 = height * 0.8;
     return new Scaffold(
       backgroundColor: paleRedColor,
-      body: new Container(),
       floatingActionButton: FloatingActionButton.extended(
         elevation: 20.0,
         onPressed: () {
