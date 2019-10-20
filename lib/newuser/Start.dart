@@ -75,16 +75,16 @@ class StartState extends State<Start> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Terms()));
                 },
-                color: Colors.grey,
+                color: Colors.white,
                 elevation: 10.0,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
                 child: new Text(
-                  "Terms of Service", 
+                  "Terms of Service",
                   style: new TextStyle(
-                  fontFamily: 'reggie',
-                  color: Colors.white,
-                  fontSize: 10.0,
+                    fontFamily: 'reggie',
+                    color: paleRedColor,
+                    fontSize: 12.0,
                   ),
                 ),
               ),

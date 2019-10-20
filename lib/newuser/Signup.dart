@@ -153,7 +153,6 @@ class SignUpState extends State<SignUp> {
           new Padding(
             padding: EdgeInsets.only(top: 20.0),
           ),
-// click to accept terms and conditions
           new Container(
             child: new SizedBox(
               width: 270.0,
