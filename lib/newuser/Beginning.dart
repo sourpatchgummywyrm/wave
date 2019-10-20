@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:globe/Mapping.dart';
 import 'package:globe/global.dart';
 import 'termsofservice.dart';
 import 'Start.dart';
+import 'package:globe/Auth.dart';
 
 class Start extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return new StartState();
   }
+  Start ({
+    this.auth,
+    this.onSignedIn
+  });
+  final VoidCallback onSignedIn;
+  final AuthImplementation auth;
 }
 
 class StartState extends State<Start> {
+  AuthStatus _authStatus = AuthStatus.notSignedIn;
+  void _signedIn() {
+    setState(() {
+      _authStatus = AuthStatus.signedIn;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -20,7 +34,8 @@ class StartState extends State<Start> {
       backgroundColor: paleRedColor,
       body: new Column(
         children: <Widget>[
-          new SizedBox(), //add padding
+          new SizedBox(), 
+          new Image.asset('Logo.png'),
           new Container(
             height: labelheight,
             child: new Image(
@@ -36,8 +51,12 @@ class StartState extends State<Start> {
               width: 270.0,
               child: new RaisedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Sign()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Sign
+                      (
+                        auth: widget.auth,
+                        onSignedIn: _signedIn,
+                      )));
                 },
                 color: Colors.white,
                 elevation: 20.0,

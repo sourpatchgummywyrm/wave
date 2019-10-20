@@ -3,8 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 import 'package:globe/main/profile.dart';
 
+String eventName="";
+String day="";
+String timeOfDay="";
+String place="";
 class Waves extends StatefulWidget {
-  
+
+  Waves();
+  Waves.create(String name, String date,String time,String location){
+     eventName = name;
+     day = date;
+     timeOfDay = time;
+     place = location;
+  }
   @override
   State<StatefulWidget> createState() {
     return new WavesState();
@@ -21,6 +32,20 @@ class WavesState extends State<Waves> {
     //     _events.add(Events());
     //   });
     // }
+    bool repeat = false;
+    for(int i = 0; i < _events.length; i++) {
+      if(eventName == _events[i].name){
+        repeat = true;
+      }
+    }
+    if(!repeat) {
+      _events.add(new Events(
+        name: eventName,
+        location: place,
+        description: day,
+        time: timeOfDay,
+        rsvp: false));
+    }
     double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
       key: _scaffoldKey,

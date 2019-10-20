@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:globe/Auth.dart';
-//import 'package:globe/global.dart';
+import 'package:globe/global.dart';
 import 'package:globe/main/hub.dart';
-import 'CustomButton.dart';
+import 'CustomButton.dart'; 
 
 class Sign extends StatefulWidget {
   Sign({ this.auth, this.onSignedIn,});
@@ -45,13 +45,17 @@ class SignState extends State<Sign> {
         setState(() {
           _authHint = 'Signed In\n\nUser id: $userId';
         });
-        widget.onSignedIn();
         Navigator.push(context, MaterialPageRoute(builder: (context) => Hub()));
+        widget.onSignedIn();
+        //Navigator.push(context, MaterialPageRoute(builder: (context) => Hub()));
       }
       catch (e) {
         setState(() {
           _authHint = 'Sign In Error\n\n${e.toString()}';
         });
+        if (e.toString()=="type 'AuthResult' is not a subtype of type 'FirebaseUser' in type cast"){
+          Navigator.push(context,MaterialPageRoute(builder: (context) => Hub()));
+        }
         print(e);
       }
     } else {
@@ -147,6 +151,7 @@ class SignState extends State<Sign> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: paleRedColor,
       body: new SingleChildScrollView(child: new Container(
         padding: const EdgeInsets.all(16.0),
         child: new Column(

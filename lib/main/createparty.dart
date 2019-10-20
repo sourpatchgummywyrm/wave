@@ -54,13 +54,12 @@ class CreatePartyState extends State<CreateParty> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => Hub(
-                      partyName: partyName.text,
-                      partyLocation: partyLocation.text,
-                      partyTime: date.toString(),
-                      partyDescription: time.toString(),
-                      condition: conditionM,
-                    )));
+                builder: (context) => Waves.create(
+                     partyName.text,
+                      date.month.toString()+"/"+date.day.toString()+"/"+date.year.toString(),
+                      time.format(context),
+                      partyLocation.text,
+                )));
       };
     }
     double height = MediaQuery.of(context).size.height;
