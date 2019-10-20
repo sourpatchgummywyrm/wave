@@ -60,6 +60,7 @@ class WavesState extends State<Waves> {
                     onDismissed: (direction) {
                       setState(() {
                         _events.removeAt(index);
+                        // print(Events[0]);
                       });
                     },
                     key: Key(events.name),
@@ -168,12 +169,13 @@ class WavesState extends State<Waves> {
 }
 
 class Events {
-  Events({this.name, this.location, this.description, this.time});
+  Events({this.name, this.location, this.description, this.time, this.rsvp});
 
   String name;
   String location;
   String description;
   String time;
+  bool rsvp;
 }
 
 final List<Events> _events = <Events>[
@@ -181,95 +183,114 @@ final List<Events> _events = <Events>[
       name: 'party1',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party2',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party3',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party4',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party5',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party6',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party7',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party8',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party9',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party10',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party11',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party12',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party13',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party14',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party15',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party16',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party17',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party18',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
   Events(
       name: 'party19',
       location: 'location',
       description: "yadda yadda yadda",
-      time: "12pm - 5pm"),
+      time: "12pm - 5pm",
+      rsvp: false),
 ];
