@@ -3,8 +3,15 @@ import 'package:globe/global.dart';
 import 'package:globe/main/profile.dart';
 import 'package:globe/main/search.dart';
 import 'package:globe/main/waves.dart';
+import 'package:globe/Auth.dart';
 
 class Hub extends StatefulWidget {
+  Hub({
+    this.auth,
+    this.onSignedOut,
+  });
+  final AuthImplementation auth;
+  final VoidCallback onSignedOut; 
   @override
   State<StatefulWidget> createState() {
     return new HubState();

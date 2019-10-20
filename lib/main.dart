@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:globe/Mapping.dart';
 import './newuser/Start.dart';
 import 'package:flutter/services.dart';
+import 'Auth.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       title: "What's the Wave?",
-      home: Start(),
+      home: Mapping(auth: Auth(),),
       debugShowCheckedModeBanner: false,
     );
   }

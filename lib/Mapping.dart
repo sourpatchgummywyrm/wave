@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:globe/main/hub.dart';
 import 'package:globe/newuser/Start.dart';
+
 import 'Auth.dart';
 
 enum AuthStatus {
@@ -29,14 +30,31 @@ class _MappingState extends State<Mapping> {
       });
     });
   }
+
+  void _signedIn() {
+    setState(() {
+      _authStatus = AuthStatus.signedIn;
+    });
+  }
+  void _signOut() {
+    setState(() {
+     _authStatus = AuthStatus.notSignedIn; 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     switch(_authStatus) {
       case AuthStatus.notSignedIn:
-      return new Start();
+      return new Sign(
+        auth: widget.auth,
+        onSignedIn: _signedIn,
+      );
       break;
       case AuthStatus.signedIn:
-      return new Hub();
+      return new Hub(
+        auth: widget.auth,
+        onSignedOut: _signOut,
+      );
       break;
     }
     return null;
