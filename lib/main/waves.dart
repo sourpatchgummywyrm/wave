@@ -38,7 +38,7 @@ class WavesState extends State<Waves> {
         repeat = true;
       }
     }
-    if(!repeat) {
+    if(!repeat && eventName!="") {
       _events.add(new Events(
         name: eventName,
         location: place,
