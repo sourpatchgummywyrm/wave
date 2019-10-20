@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:globe/Auth.dart';
-import 'package:globe/global.dart';
+//import 'package:globe/global.dart';
 import 'package:globe/main/hub.dart';
 import 'CustomButton.dart';
 

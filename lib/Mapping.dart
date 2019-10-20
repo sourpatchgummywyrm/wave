@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:globe/main/hub.dart';
-import 'package:globe/newuser/Start.dart';
+import 'package:globe/newuser/Beginning.dart';
 
 import 'Auth.dart';
 
@@ -45,9 +45,9 @@ class _MappingState extends State<Mapping> {
   Widget build(BuildContext context) {
     switch(_authStatus) {
       case AuthStatus.notSignedIn:
-      return new Sign(
-        auth: widget.auth,
-        onSignedIn: _signedIn,
+      return new Start(
+        //auth: widget.auth,
+       // onSignedIn: _signedIn,
       );
       break;
       case AuthStatus.signedIn:
