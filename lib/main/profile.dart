@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 
 class Profile extends StatefulWidget {
+  Profile({this.passedName, this.passedLocation});
+  String passedName;
+  String passedLocation;
   @override
   State<StatefulWidget> createState() {
     return new ProfileState();
@@ -31,7 +34,10 @@ class ProfileState extends State<Profile> {
               style: loginScreen2,
             ),
           ),
-          new Container(height: 265),
+          new Container(
+            height: 265,
+            child: new Text("${widget.passedName} + ${widget.passedLocation}"),
+          ),
           new SizedBox(
               width: 300.0,
               height: 42.5,

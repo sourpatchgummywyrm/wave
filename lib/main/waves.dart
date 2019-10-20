@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
+import 'package:globe/main/profile.dart';
 
 class Waves extends StatefulWidget {
   Waves({Key key}) : super(key: key);
@@ -34,7 +35,6 @@ class WavesState extends State<Waves> {
     //     _scaffoldKey.currentState.showSnackBar(snackBar);
     //   };
     // }
-
     double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
       key: _scaffoldKey,
@@ -51,7 +51,6 @@ class WavesState extends State<Waves> {
                 itemCount: _events.length,
                 itemBuilder: (context, index) {
                   final events = _events[index];
-
                   return Dismissible(
                     direction: DismissDirection.endToStart,
                     background: new Container(
@@ -115,25 +114,33 @@ class WavesState extends State<Waves> {
                                         new Container(
                                           child: new SizedBox(
                                             width: 300.0,
+                                            height: 40.0,
                                             child: new RaisedButton(
-                                              elevation: 10.0,
-                                              onPressed: () {
-                                                setState(() {
-                                                  events.rsvp = true;
-                                                  if (events.rsvp == true) {
-                                                    return null;
-                                                  }
-                                                });
-                                              },
+                                              color: Colors.green,
+                                              onPressed: !events.rsvp
+                                                  ? () {
+                                                      setState(() {
+                                                        events.rsvp = true;
+                                                      });
+                                                      Navigator.pop(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              builder:
+                                                                  (context) =>
+                                                                      Profile(
+                                                                        passedName:
+                                                                            events.name,
+                                                                        passedLocation:
+                                                                            events.location,
+                                                                      )));
+                                                    }
+                                                  : null,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10.0)),
-                                              color: Colors.green,
-                                              child: new Text(
-                                                "RSVP",
-                                                style: reggie6,
-                                              ),
+                                              child: new Text("RSVP",
+                                                  style: reggie3),
                                             ),
                                           ),
                                         ),
