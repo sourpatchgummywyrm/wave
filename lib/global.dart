@@ -6,7 +6,7 @@ Color neonGreenColor = new Color(0xFF39ff14);
 Color darkerRedColors = new Color(0xFFff9999);
 Color silverColors = new Color(0xFFDCDCDC);
 Color generalBlueColor = new Color(0xFF0D47A1); 
-Color bforBlack = new Color(0xFFFFFFFF);
+Color bforBlack = new Color(0xFF000000);
 
 TextStyle loginScreen = new TextStyle(
     fontFamily: 'Varela Round',

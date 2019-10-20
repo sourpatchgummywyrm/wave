@@ -59,7 +59,7 @@ class Terms extends StatelessWidget {
                                   'graphics, logos) is the property of the application and its content creators '
                                   'and protected by international copyright laws. The entire compilation of '
                                   'the content found on this application is the exclusive property of the '
-                                  'application, with copyright authorship for this compilation by [name].\n\n', 
+                                  'application, with copyright authorship for this compilation by the application.\n\n', 
                            style: new TextStyle(color: bforBlack,
                                                 fontSize: 10.0,
                                                 fontWeight: FontWeight.bold)),                              
