@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:globe/global.dart';
-//import 'Start.dart';
+
+const PrimaryColor = const Color(0xFFEF9A9A);
 
 class Terms extends StatelessWidget {
   @override
@@ -9,61 +9,24 @@ class Terms extends StatelessWidget {
       title: 'Welcome to Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Flutter'),
+          title: Text('Terms of Service'),
+          backgroundColor: PrimaryColor,
         ),
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
-  }
-  /*
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      backgroundColor: paleRedColor,
-      body: new Center(
-          child: new Text(
-        "Terms of Service kjnskjnc..",
-        style: reggie3,
-      )),
-    );
-  }*/
-}
-/*
-class FirstRoute extends State<Terms> {
-  @override
-  Widget build(BuildContext context) {
-      body: Center(
-        child: RaisedButton(
-          child: Text('Open route'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondRoute()),
-            );
-          },
+        body: new DefaultTextStyle(
+          style: new TextStyle(
+                inherit: true,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.red,
+                decorationStyle: TextDecorationStyle.wavy,
+                color: Colors.blue),
+              child: new Center(
+                child: Text('By using this application, you agree to our terms '
+                            'of service.'), 
+          )  
         ),
       ),
     );
   }
 }
-*/
-/*
-class SecondRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Second Route"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}*/
