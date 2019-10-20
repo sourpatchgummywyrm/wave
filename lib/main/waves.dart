@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 import 'package:globe/main/profile.dart';
@@ -122,7 +123,7 @@ class WavesState extends State<Waves> {
                                                       setState(() {
                                                         events.rsvp = true;
                                                       });
-                                                      Navigator.pop(
+                                                      Navigator.push(
                                                           context,
                                                           MaterialPageRoute(
                                                               builder:

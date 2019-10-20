@@ -35,9 +35,28 @@ class ProfileState extends State<Profile> {
             ),
           ),
           new Container(
-            height: 265,
-            child: new Text("${widget.passedName} + ${widget.passedLocation}"),
-          ),
+              padding: EdgeInsets.only(
+                  left: 20.0, right: 20.0, bottom: 20.0, top: 20.0),
+              child: new Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  child: new ExpansionTile(
+                    title: new Text(
+                      "Attending",
+                      style: new TextStyle(
+                        color: Colors.green,
+                        fontFamily: 'Varela Round',
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    children: <Widget>[
+                      new Text(
+                          "Event: ${widget.passedName} , Location: ${widget.passedLocation}"),
+                      new Padding(
+                        padding: EdgeInsets.only(top: 20.0),
+                      )
+                    ],
+                  ))),
           new SizedBox(
               width: 300.0,
               height: 42.5,
