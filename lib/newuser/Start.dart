@@ -38,7 +38,7 @@ class StartState extends State<Start> {
                     color: Colors.white,
                     fontSize: 17.5,
                     letterSpacing: 1.5,
-                    fontWeight: FontWeight.w200),
+                    fontWeight: FontWeight.w800),
               ),
             ),
           ),

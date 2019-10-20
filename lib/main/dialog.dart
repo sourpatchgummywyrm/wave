@@ -25,7 +25,7 @@ class Dialogs {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Remove $title event from your timeline?",
+                    "Do you want to attend $title?",
                     style: reggie4,
                     textAlign: TextAlign.center,
                   )
@@ -43,7 +43,7 @@ class Dialogs {
                     Navigator.pop(context);
                   },
                   child: Text(
-                    "Bett",
+                    "Confirm",
                     style: reggie3,
                   ),
                 ),

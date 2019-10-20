@@ -39,7 +39,7 @@ TextStyle reggie3 = new TextStyle(
     color: Colors.white,
     fontSize: 14.5,
     letterSpacing: 1.5,
-    fontWeight: FontWeight.w200);
+    fontWeight: FontWeight.w600);
 //may have to change to w100
 
 TextStyle reggie4 = new TextStyle(
@@ -47,17 +47,17 @@ TextStyle reggie4 = new TextStyle(
     color: paleRedColor,
     fontSize: 14.5,
     letterSpacing: 1.5,
-    fontWeight: FontWeight.w200);
+    fontWeight: FontWeight.w600);
 TextStyle reggie5 = new TextStyle(
     fontFamily: 'Varela Round',
     color: paleRedColor,
     fontSize: 11.5,
     letterSpacing: 1.5,
-    fontWeight: FontWeight.w200); //may have to change to w100
+    fontWeight: FontWeight.w600); //may have to change to w100
 
 TextStyle reggie6 = new TextStyle(
     fontFamily: 'Varela Round',
     color: Colors.white,
     fontSize: 11.5,
     letterSpacing: 1.5,
-    fontWeight: FontWeight.w200); //may have to change to w100
+    fontWeight: FontWeight.w600); //may have to change to w100
