@@ -16,24 +16,24 @@ class WavesState extends State<Waves> {
 
   @override
   Widget build(BuildContext context) {
-    var onPressed;
-    if (_enabled) {
-      onPressed = () {
-        setState(() {
-          _enabled = false;
-        });
-        final snackBar = new SnackBar(
-          content: new Text(
-            "You are now attending this Party",
-            style: reggie4,
-            textAlign: TextAlign.center,
-          ),
-          duration: new Duration(seconds: 3),
-          backgroundColor: Colors.white,
-        );
-        _scaffoldKey.currentState.showSnackBar(snackBar);
-      };
-    }
+    // var onPressed;
+    // if (_enabled) {
+    //   onPressed = () {
+    //     setState(() {
+    //        = false;
+    //     });
+    //     final snackBar = new SnackBar(
+    //       content: new Text(
+    //         "You are now attending this Party",
+    //         style: reggie4,
+    //         textAlign: TextAlign.center,
+    //       ),
+    //       duration: new Duration(seconds: 3),
+    //       backgroundColor: Colors.white,
+    //     );
+    //     _scaffoldKey.currentState.showSnackBar(snackBar);
+    //   };
+    // }
 
     double height = MediaQuery.of(context).size.height * 0.8;
     return new Scaffold(
@@ -117,7 +117,14 @@ class WavesState extends State<Waves> {
                                             width: 300.0,
                                             child: new RaisedButton(
                                               elevation: 10.0,
-                                              onPressed: onPressed,
+                                              onPressed: () {
+                                                setState(() {
+                                                  events.rsvp = true;
+                                                  if (events.rsvp == true) {
+                                                    return null;
+                                                  }
+                                                });
+                                              },
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
