@@ -17,7 +17,7 @@ TextStyle loginScreen2 = new TextStyle(
     fontFamily: 'Varela Round',
     color: Colors.white,
     fontSize: 20.0,
-    letterSpacing: 1.5,
+    letterSpacing: 1.8,
     fontWeight: FontWeight.w800);
 
 TextStyle reggie = new TextStyle(
