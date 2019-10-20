@@ -38,6 +38,9 @@ class StartState extends State<Start> {
           new Image.asset('assets/logo.png'),
           new Container(
             height: labelheight,
+            child: new Image(
+              image: AssetImage('assets/Logo.png'),
+            ),
           ),
           new Padding(
             padding: EdgeInsets.only(top: 20.0),

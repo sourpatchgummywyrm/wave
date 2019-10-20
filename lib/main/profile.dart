@@ -19,14 +19,6 @@ class ProfileState extends State<Profile> {
       backgroundColor: paleRedColor,
       body: new Column(
         children: <Widget>[
-          Center(
-            child: new Image.asset(
-              'assets/Girl.png',
-              width: 100,
-              height: 170,
-              fit: BoxFit.fill,
-            ),
-          ),
           new Padding(
             padding: EdgeInsets.only(top: 30.0),
           ),

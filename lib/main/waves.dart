@@ -7,6 +7,7 @@ String eventName="";
 String day="";
 String timeOfDay="";
 String place="";
+
 class Waves extends StatefulWidget {
 
   Waves();
@@ -149,17 +150,6 @@ class WavesState extends State<Waves> {
                                                       setState(() {
                                                         events.rsvp = true;
                                                       });
-                                                      Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder:
-                                                                  (context) =>
-                                                                      Profile(
-                                                                        passedName:
-                                                                            events.name,
-                                                                        passedLocation:
-                                                                            events.location,
-                                                                      )));
                                                     }
                                                   : null,
                                               shape: RoundedRectangleBorder(
