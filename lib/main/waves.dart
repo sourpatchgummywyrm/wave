@@ -149,17 +149,6 @@ class WavesState extends State<Waves> {
                                                       setState(() {
                                                         events.rsvp = true;
                                                       });
-                                                      Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder:
-                                                                  (context) =>
-                                                                      Profile(
-                                                                        passedName:
-                                                                            events.name,
-                                                                        passedLocation:
-                                                                            events.location,
-                                                                      )));
                                                     }
                                                   : null,
                                               shape: RoundedRectangleBorder(
