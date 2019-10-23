@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'package:globe/Auth.dart';
 import 'package:globe/global.dart';
 import 'package:globe/main/hub.dart';
@@ -20,8 +21,7 @@ enum FormType {
 }
 
 class SignState extends State<Sign> {
-  static final formKey = new GlobalKey<FormState>();
-
+  final formKey = new GlobalKey<FormState>();
   String _email;
   String _password;
   FormType _formType = FormType.login;
@@ -45,7 +45,7 @@ class SignState extends State<Sign> {
         setState(() {
           _authHint = 'Signed In\n\nUser id: $userId';
         });
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Hub()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Hub(auth: widget.auth, onSignedOut: widget.onSignedIn,)));
         widget.onSignedIn();
         //Navigator.push(context, MaterialPageRoute(builder: (context) => Hub()));
       }
@@ -54,7 +54,8 @@ class SignState extends State<Sign> {
           _authHint = 'Sign In Error\n\n${e.toString()}';
         });
         if (e.toString()=="type 'AuthResult' is not a subtype of type 'FirebaseUser' in type cast"){
-          Navigator.push(context,MaterialPageRoute(builder: (context) => Hub()));
+          //Navigator.of(context).pop();
+          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => Hub(auth: widget.auth, onSignedOut: widget.onSignedIn,)));
         }
         print(e);
       }

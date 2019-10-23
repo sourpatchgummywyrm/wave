@@ -54,7 +54,7 @@ class StartState extends State<Start> {
                       MaterialPageRoute(builder: (context) => Sign
                       (
                         auth: widget.auth,
-                        onSignedIn: _signedIn,
+                        onSignedIn: widget.onSignedIn
                       )));
                 },
                 color: Colors.white,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:globe/global.dart';
 import 'package:globe/main/attending.dart' as prefix0;
+import 'package:globe/newuser/Beginning.dart';
 import 'attending.dart';
 import 'package:globe/newuser/Start.dart'; 
 import 'package:globe/Auth.dart';
@@ -8,6 +9,9 @@ import 'package:globe/Auth.dart';
 
 
 class Profile extends StatefulWidget {
+  Profile({ this.auth, this.signedOut});
+  final AuthImplementation auth;
+  final VoidCallback signedOut;
   @override
   State<StatefulWidget> createState() {
     return new ProfileState();
@@ -15,6 +19,15 @@ class Profile extends StatefulWidget {
 }
 
 class ProfileState extends State<Profile> {
+  void _signOut() async {
+    try {
+      await widget.auth.signOut();
+      widget.signedOut();
+    } catch(e){
+      print(e);
+    }
+  }
+  FormType _formType = FormType.login;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -84,8 +97,11 @@ class ProfileState extends State<Profile> {
                           width: 268.0,
                           child: new RaisedButton(
                             onPressed: () {
-                            Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Sign()));
+                            _signOut();
+                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Start
+                      (
+                        auth: widget.auth,
+                        onSignedIn: widget.signedOut)));
                           },
                         color: Colors.white,
                         elevation: 5.0,

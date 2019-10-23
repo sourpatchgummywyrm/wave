@@ -13,12 +13,7 @@ class Hub extends StatefulWidget {
   bool condition = true;
   Hub(
       {this.auth,
-      this.onSignedOut,
-      this.partyName,
-      this.partyLocation,
-      this.partyTime,
-      this.partyDescription,
-      this.condition});
+      this.onSignedOut,});
   final AuthImplementation auth;
   final VoidCallback onSignedOut;
   @override
@@ -74,7 +69,7 @@ class HubState extends State<Hub> with SingleTickerProviderStateMixin {
           ),
           body: new TabBarView(
             physics: NeverScrollableScrollPhysics(),
-            children: <Widget>[Search(), Waves(), Profile()],
+            children: <Widget>[Search(), Waves(), Profile(auth: widget.auth, signedOut: widget.onSignedOut,)],
           )),
     );
   }

@@ -47,8 +47,7 @@ class _MappingState extends State<Mapping> {
       case AuthStatus.notSignedIn:
       return new Start(
         auth: widget.auth,
-        onSignedIn: _signedIn,
-      );
+        onSignedIn: _signedIn,);
       break;
       case AuthStatus.signedIn:
       return new Hub(
